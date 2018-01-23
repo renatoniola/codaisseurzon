@@ -27,4 +27,3 @@ RSpec.describe Product, type: :model do
     expect(event.errors).to have_key(:name)
   end
 end
-end
