@@ -1,3 +1,4 @@
+Card.destroy_all
 Photo.destroy_all
 Product.destroy_all
 User.destroy_all
@@ -17,7 +18,7 @@ product3 = Product.create!(name: 'huawei 10',
 product4 = Product.create!(name: 'nokia 100',
   description: 'nokia10 10 Yr kitsch edison bulb, aesthetic tofu vape pop-up fam humblebrag franzen chambray semiotics. ',
   price: 500.00)
-product5 = Product.create!(name: 'sony xpiria', 
+product5 = Product.create!(name: 'sony xpiria',
   description: 'sony xpiria Yr kitsch edison bulb, aesthetic tofu vape pop-up fam humblebrag franzen chambray semiotics. ',
   price: 67.00)
 
