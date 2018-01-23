@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Photo.destroy_all
 Product.destroy_all
 
 product1 = Product.create!(name: 'iphone 17 plus',
@@ -25,3 +26,10 @@ product4 = Product.create!(name: 'nokia 100',
 product5 = Product.create!(name: 'sony xpiria',
                           description: 'sony xpiria Yr kitsch edison bulb, aesthetic tofu vape pop-up fam humblebrag franzen chambray semiotics. ',
                           price: 67.00)
+
+
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/iphone.jpg", product: product1)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/samsung.webp", product: product2)
+photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/uawei.jpg", product: product3)
+photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/nokia.jpg", product: product4)
+photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/sony_xpiria.jpg", product: product5)
