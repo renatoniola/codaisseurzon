@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123122514) do
+ActiveRecord::Schema.define(version: 20180123140348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 20180123122514) do
     t.bigint "product_id"
     t.index ["product_id"], name: "index_carts_on_product_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "checkouts", force: :cascade do |t|
+    t.string "token"
+    t.integer "amount"
+    t.decimal "total_price"
+    t.bigint "product_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_checkouts_on_product_id"
+    t.index ["user_id"], name: "index_checkouts_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -40,6 +52,19 @@ ActiveRecord::Schema.define(version: 20180123122514) do
     t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "address_number"
+    t.string "city"
+    t.string "postal_code"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,5 +86,8 @@ ActiveRecord::Schema.define(version: 20180123122514) do
 
   add_foreign_key "carts", "products"
   add_foreign_key "carts", "users"
+  add_foreign_key "checkouts", "products"
+  add_foreign_key "checkouts", "users"
   add_foreign_key "photos", "products"
+  add_foreign_key "profiles", "users"
 end
