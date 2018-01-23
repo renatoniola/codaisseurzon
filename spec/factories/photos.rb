@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :photo do
-    product nil
-    image "MyString"
-  end
+   image         { File.open(File.join(Rails.root, '/spec/support/uploads/nokia.jpg')) }
+   product        { build(:product) }
+ end
 end
