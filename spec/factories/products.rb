@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :product do
-    name "MyString"
-    description "MyText"
-    price "9.99"
-  end
+ factory :product do
+   name           { Faker::Lorem.words(3).join(' ') }
+   description    { Faker::Lorem.sentence(40) }
+   price          { Faker::Commerce.price }
+ end
 end
