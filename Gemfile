@@ -6,11 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'cloudinary', '1.2.3'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-
 gem 'devise'
-
 gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
