@@ -5,12 +5,6 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :products, only: [:show]
+  resources :carts, only: [:create, :destroy, :show]
 
-  resources :carts, only: [:create, :destroy, :show] do
-    resources :products, only: [:create, :destroy]
   end
-
-  resources :users, only: [] do
-    resources :profiles, except: [:destroy]
-  end
-end
