@@ -1,9 +1,11 @@
+
 <h1>home page</h1>
-<ul>
+<div class="row">
   <% @products.each do |product| %>
-    <li>
+    <div class="col-xs-6 col-sm-4">
       <h4><%= link_to product.name , product_path(product.id) %></h4>
       <p><%= product.price %></p>
-    </li>
+      <button value="<%= product.id %>" type="button" class="add-product btn btn-primary">Primary</button>
+    </div>
   <% end %>
-</ul>
+</div>
