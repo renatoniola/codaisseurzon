@@ -9,3 +9,13 @@
     </div>
   <% end %>
 </div>
+
+<div>
+  <%= form_tag(root_path, method: :get) do %>
+    <%= text_field_tag :term %>
+    <%= submit_tag 'Search' %>
+  <% end %>
+  <p>
+    <%= link_to "Back", root_path, class: "btn btn-default" %>
+  </p>
+</div>
