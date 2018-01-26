@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :products, only: [:show]
-  resources :carts, only: [:create, :destroy, :show]
+  resources :shopping_cart, only: [:create, :destroy, :show]
 
+  namespace :api do
+    resources :shopping_cart, only: [:create, :destroy, :show]
+    resources :products
   end
+end
