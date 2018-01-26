@@ -1,0 +1,10 @@
+<div id="shopping-cart" class="col-md-12">
+  <% @cart.each do |product| %>
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag(product.photos.first.image, {class:"img-responsive img-cart"}) %>
+      <%= link_to(product.name, product_path(item)) %>
+    </div>
+  </div>
+  <% end %>
+</div>
