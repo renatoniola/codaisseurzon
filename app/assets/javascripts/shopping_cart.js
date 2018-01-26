@@ -5,7 +5,7 @@ function addProduct(e){
 
   $.ajax({
     type: "POST",
-    url: `/cart/`,
+    url: `/api/cart/`,
     data: JSON.stringify({produtct: prodId}),
     contentType: "application/json",
     dataType: "json"
