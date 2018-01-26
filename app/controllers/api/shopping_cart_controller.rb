@@ -9,9 +9,11 @@ class Api::ShoppingCartController < Api::BaseController
     }.to_json
   end
   def create
-    shopping_cart= ShoppingCart.new(shopping_cart_params)
+    shopping_cart ||= ShoppingCart.new(shopping_cart_params)
 
-    if shopping_cart.save
+    @product = Product.find(params[:product])
+
+    if shopping_cart.add_product(@product)
       render status: 201, json: {
         message: "ShoppingCart successfully created",
         shopping_cart: shopping_cart
@@ -36,6 +38,6 @@ class Api::ShoppingCartController < Api::BaseController
   private
 
   def shopping_cart_params
-    params.require(:shopping_cart).permit(:session, :order_line)
+    params.require(:shopping_cart).permit(:session, :order_line, :product)
   end
 end
