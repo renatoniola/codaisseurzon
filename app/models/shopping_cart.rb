@@ -3,6 +3,7 @@ class ShoppingCart
 
   def initialize(session = {})
     @session = session
+
     session_lines = session[:shopping_cart] || []
 
     @order_lines = session_lines.map do |line|
