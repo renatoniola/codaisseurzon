@@ -1,4 +1,4 @@
-class Api::ShoppingCartController < ApplicationController
+class Api::ShoppingCartController < Api::BaseController
   skip_before_action :verify_authenticity_token
 
   def show
