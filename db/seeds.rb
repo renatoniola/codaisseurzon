@@ -34,8 +34,3 @@ photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/i
 photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/uawei.jpg", product: product3)
 photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/nokia.jpg", product: product4)
 photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/irinaovdii/image/upload/v1516711189/Products/sony_xpiria.jpg", product: product5)
-
-
-Cart.create!(total: 400.0, count: 2, user: iryna, product: product4)
-Cart.create!(total: 300.0, count: 3, user: iryna, product: product4)
-Cart.create!(total: 200.0, count: 1, user: iryna, product: product4)
