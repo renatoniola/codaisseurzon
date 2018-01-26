@@ -1,5 +1,7 @@
 class ShoppingCartController < ApplicationController
+
   def index
+
   end
 
   def create
@@ -12,5 +14,6 @@ class ShoppingCartController < ApplicationController
   end
 
   def destroy
+
   end
 end

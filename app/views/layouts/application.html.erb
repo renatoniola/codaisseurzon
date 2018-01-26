@@ -9,7 +9,6 @@
   </head>
 
   <body>
-
     <%= render 'shared/navbar' %>
     <div class="container-fluid">
       <p class="“notice”"><%= notice %></p>
@@ -18,9 +17,10 @@
         <div class="col-md-8">
           <%= yield %>
         </div>
-        
+
         <div class="col-md-4">
-          <%= render 'shopping_cart/shopping_cart' %>
+
+          <%= render 'shopping_cart/cart' %>
         </div>
       </div>
     </div>
