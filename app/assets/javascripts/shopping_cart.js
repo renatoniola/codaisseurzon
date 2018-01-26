@@ -6,12 +6,12 @@ function addProduct(e){
   $.ajax({
     type: "POST",
     url: `/api/shopping_cart/`,
-    data: JSON.stringify({produtct: prodId}),
+    data: JSON.stringify({product: prodId}),
     contentType: "application/json",
     dataType: "json"
 
   }).done(function(product){
-
+    console.log(product)
   }).fail(function(err){
 
   })
